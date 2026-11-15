@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Miami Nights Boat Party</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Pacifico&family=Monoton&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Pacifico&family=Monoton&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --neon-pink: #ff2bd6;
@@ -17,7 +17,7 @@
   body {
     background: radial-gradient(ellipse at bottom, #1a0033 0%, #0a0014 70%);
     color: #fff;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Inter', sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
   }
@@ -45,60 +45,59 @@
   .palm.right { right: -30px; transform: scaleX(-1); }
   header {
     text-align: center;
-    padding: 50px 20px 30px;
+    padding: 20px 20px 30px;
     position: relative;
     z-index: 1;
   }
-  h1 {
-    font-family: 'Monoton', cursive;
-    font-size: clamp(3.2rem, 11vw, 7.5rem);
-    color: #fff;
-    letter-spacing: 6px;
-    text-shadow:
-      0 0 10px #fff,
-      0 0 20px var(--neon-pink),
-      0 0 40px var(--neon-pink),
-      0 0 80px var(--neon-pink),
-      0 0 120px var(--neon-purple);
-    animation: neonPulse 2.5s ease-in-out infinite alternate;
-    line-height: 0.9;
-  }
-  @keyframes neonPulse {
-    from { text-shadow: 0 0 10px #fff, 0 0 20px var(--neon-pink), 0 0 40px var(--neon-pink), 0 0 80px var(--neon-pink); }
-    to   { text-shadow: 0 0 15px #fff, 0 0 30px var(--neon-cyan), 0 0 60px var(--neon-pink), 0 0 100px var(--neon-purple); }
-  }
-  .subtitle {
-    font-family: 'Pacifico', cursive;
-    font-size: 1.9rem;
-    color: var(--neon-cyan);
-    margin-top: 12px;
-    text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan);
-  }
-  .date-badge {
-    display: inline-block;
-    margin-top: 22px;
-    padding: 12px 32px;
-    border: 2px solid var(--neon-pink);
-    border-radius: 50px;
-    font-size: 1.15rem;
-    letter-spacing: 2px;
-    box-shadow: 0 0 15px var(--neon-pink), inset 0 0 15px rgba(255,43,214,0.25);
-    background: rgba(255,43,214,0.08);
-    color: #fff;
+  .flamingo-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
   }
   .flamingo {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 90px;
-    height: 140px;
-    opacity: 0.9;
-    filter: drop-shadow(0 0 8px var(--neon-pink)) drop-shadow(0 0 15px var(--neon-cyan));
+    width: 80px;
+    height: 120px;
+    opacity: 0.95;
+    filter: drop-shadow(0 0 8px var(--neon-pink)) drop-shadow(0 0 16px var(--neon-cyan));
     animation: float 4s ease-in-out infinite;
   }
   @keyframes float {
     0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-8px); }
+  }
+  h1 {
+    font-family: 'Monoton', cursive;
+    font-size: clamp(3rem, 10vw, 7rem);
+    color: #ff2bd6;
+    letter-spacing: 5px;
+    text-shadow:
+      0 0 8px #ff2bd6,
+      0 0 20px #ff2bd6,
+      0 0 40px #ff2bd6,
+      0 0 80px #ff2bd6;
+    line-height: 0.95;
+    margin: 10px 0 5px;
+  }
+  .subtitle {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.8rem;
+    color: var(--neon-cyan);
+    margin-top: 8px;
+    text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan);
+  }
+  .date-badge {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 32px;
+    border: 2px solid var(--neon-pink);
+    border-radius: 50px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    letter-spacing: 1px;
+    box-shadow: 0 0 15px var(--neon-pink), inset 0 0 15px rgba(255,43,214,0.25);
+    background: rgba(255,43,214,0.08);
+    color: #fff;
   }
   .container {
     max-width: 900px;
@@ -119,20 +118,20 @@
   h2 {
     font-family: 'Orbitron', sans-serif;
     color: var(--neon-pink);
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 3px;
     text-shadow: 0 0 10px var(--neon-pink);
   }
   p, li {
-    line-height: 1.7;
-    font-size: 1.05rem;
-    color: #e0e0ff;
+    line-height: 1.75;
+    font-size: 1.08rem;
+    color: #e8e8ff;
   }
   .highlight {
     color: var(--neon-gold);
-    font-weight: bold;
+    font-weight: 700;
   }
   a {
     color: var(--neon-cyan);
@@ -159,7 +158,7 @@
   @media (max-width: 600px) {
     .section { padding: 20px; }
     h1 { letter-spacing: 2px; }
-    .flamingo { width: 60px; height: 90px; top: 10px; right: 10px; }
+    .flamingo { width: 60px; height: 90px; }
   }
 </style>
 </head>
@@ -168,13 +167,15 @@
   <div class="palm right"></div>
 
   <header>
-    <svg class="flamingo" viewBox="0 0 100 160" xmlns="http://www.w3.org/2000/svg">
-      <path d="M50 140 C40 120, 30 100, 35 80 C40 60, 55 50, 70 40 C80 35, 85 25, 80 15 C75 5, 65 10, 60 20 C55 30, 50 45, 45 60 C40 75, 35 90, 40 110 C45 130, 50 145, 50 140 Z" 
-            fill="none" stroke="#ff2bd6" stroke-width="3" stroke-linejoin="round"/>
-      <path d="M70 40 C85 35, 95 50, 90 65 C85 80, 75 75, 70 60" fill="none" stroke="#00f0ff" stroke-width="2.5"/>
-      <circle cx="78" cy="22" r="3" fill="#ff2bd6"/>
-      <path d="M45 100 L30 95 L25 105" fill="none" stroke="#ff2bd6" stroke-width="2"/>
-    </svg>
+    <div class="flamingo-wrap">
+      <svg class="flamingo" viewBox="0 0 100 160" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 140 C40 120, 30 100, 35 80 C40 60, 55 50, 70 40 C80 35, 85 25, 80 15 C75 5, 65 10, 60 20 C55 30, 50 45, 45 60 C40 75, 35 90, 40 110 C45 130, 50 145, 50 140 Z" 
+              fill="none" stroke="#ff2bd6" stroke-width="3.5" stroke-linejoin="round"/>
+        <path d="M70 40 C85 35, 95 50, 90 65 C85 80, 75 75, 70 60" fill="none" stroke="#00f0ff" stroke-width="2.8"/>
+        <circle cx="78" cy="22" r="3.5" fill="#ff2bd6"/>
+        <path d="M45 100 L30 95 L25 105" fill="none" stroke="#ff2bd6" stroke-width="2.2"/>
+      </svg>
+    </div>
     <h1>BOAT PARTY</h1>
     <div class="subtitle">Miami Nights • 80s Vibes</div>
     <div class="date-badge">Saturday, November 21</div>
