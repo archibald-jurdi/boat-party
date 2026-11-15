@@ -1,1 +1,212 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miami Nights Boat Party</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Pacifico&family=Monoton&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --neon-pink: #ff2bd6;
+    --neon-cyan: #00f0ff;
+    --neon-purple: #b026ff;
+    --neon-gold: #ffd700;
+    --bg: #0a0014;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: radial-gradient(ellipse at bottom, #1a0033 0%, #0a0014 70%);
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: 
+      radial-gradient(circle at 20% 80%, rgba(255,43,214,0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(0,240,255,0.1) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(176,38,255,0.08) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .palm {
+    position: fixed;
+    bottom: -20px;
+    width: 200px;
+    height: 300px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 150"><path d="M50 150 L45 80 Q30 40 10 20 Q40 30 50 10 Q60 30 90 20 Q70 40 55 80 Z" fill="%23001122" opacity="0.4"/><path d="M50 80 Q20 50 5 30" stroke="%23002233" stroke-width="2" fill="none" opacity="0.3"/></svg>') no-repeat center bottom;
+    opacity: 0.3;
+    z-index: 0;
+  }
+  .palm.left { left: -30px; }
+  .palm.right { right: -30px; transform: scaleX(-1); }
+  header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    position: relative;
+    z-index: 1;
+  }
+  h1 {
+    font-family: 'Monoton', cursive;
+    font-size: clamp(3rem, 10vw, 7rem);
+    background: linear-gradient(90deg, var(--neon-pink), var(--neon-cyan), var(--neon-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 40px var(--neon-pink), 0 0 80px var(--neon-cyan);
+    letter-spacing: 4px;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  @keyframes glow {
+    from { filter: drop-shadow(0 0 10px var(--neon-pink)); }
+    to { filter: drop-shadow(0 0 30px var(--neon-cyan)); }
+  }
+  .subtitle {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.8rem;
+    color: var(--neon-cyan);
+    margin-top: 10px;
+    text-shadow: 0 0 15px var(--neon-cyan);
+  }
+  .date-badge {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 30px;
+    border: 2px solid var(--neon-pink);
+    border-radius: 50px;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    box-shadow: 0 0 20px var(--neon-pink), inset 0 0 20px rgba(255,43,214,0.2);
+    background: rgba(255,43,214,0.05);
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  .section {
+    background: rgba(10, 0, 20, 0.7);
+    border: 1px solid rgba(255,43,214,0.3);
+    border-radius: 16px;
+    padding: 30px;
+    margin: 30px 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(176,38,255,0.2);
+  }
+  h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--neon-pink);
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px var(--neon-pink);
+  }
+  p, li {
+    line-height: 1.7;
+    font-size: 1.05rem;
+    color: #e0e0ff;
+  }
+  .placeholder {
+    background: rgba(255,215,0,0.1);
+    border-left: 3px solid var(--neon-gold);
+    padding: 10px 15px;
+    margin: 10px 0;
+    font-style: italic;
+    color: var(--neon-gold);
+  }
+  a {
+    color: var(--neon-cyan);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--neon-cyan);
+  }
+  a:hover { text-shadow: 0 0 10px var(--neon-cyan); }
+  .map-placeholder {
+    background: rgba(0,240,255,0.05);
+    border: 1px dashed var(--neon-cyan);
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 15px 0;
+  }
+  footer {
+    text-align: center;
+    padding: 40px 20px 60px;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.4rem;
+    color: var(--neon-gold);
+    text-shadow: 0 0 15px var(--neon-gold);
+  }
+  @media (max-width: 600px) {
+    .section { padding: 20px; }
+    h1 { letter-spacing: 1px; }
+  }
+</style>
+</head>
+<body>
+  <div class="palm left"></div>
+  <div class="palm right"></div>
+
+  <header>
+    <h1>BOAT PARTY</h1>
+    <div class="subtitle">Miami Nights • 80s Vibes</div>
+    <div class="date-badge">[ADD DATE & TIME HERE]</div>
+  </header>
+
+  <div class="container">
+
+    <div class="section">
+      <h2>When</h2>
+      <div class="placeholder">[Add full date, start time, and any end time / return time]</div>
+      <p>Example: Saturday, [Month Day], [Year] • Boarding from 6:00 PM • Departure 7:00 PM</p>
+    </div>
+
+    <div class="section">
+      <h2>Where & How to Get There</h2>
+      <div class="placeholder">[Add marina / dock name and address]</div>
+      <div class="map-placeholder">
+        <p>🗺️ <strong>Google Maps Link</strong></p>
+        <p><a href="#" target="_blank">[PASTE YOUR GOOGLE MAPS LINK HERE]</a></p>
+        <p style="margin-top:10px; font-size:0.9rem; opacity:0.8;">(Open in Google Maps or embed if you want)</p>
+      </div>
+      <p>Parking: [Add parking info]<br>
+      Meeting point: [Add exact meeting instructions]</p>
+    </div>
+
+    <div class="section">
+      <h2>Timing & Schedule</h2>
+      <div class="placeholder">[Add the night’s timeline]</div>
+      <ul style="list-style:none; padding-left:0;">
+        <li>6:00 PM – Arrive & board</li>
+        <li>7:00 PM – Set sail</li>
+        <li>Sunset cruise + music</li>
+        <li>[Add more stops or activities]</li>
+        <li>Return around [time]</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Details</h2>
+      <div class="placeholder">[Add what to bring, food/drinks, music, special notes]</div>
+      <p>What to bring: [swimwear, sunscreen, good vibes...]<br>
+      Food & drinks: [provided / BYOB / etc.]<br>
+      Music: 80s Miami classics all night long</p>
+    </div>
+
+    <div class="section">
+      <h2>Dress Code</h2>
+      <p>80s Miami by night energy — think pastel suits, white linen, neon accents, bold sunglasses, and that Crockett & Tubbs vibe. Comfortable enough for the water, stylish enough for the photos.</p>
+    </div>
+
+  </div>
+
+  <footer>
+    See you on the water 🌴⚓️
+  </footer>
+</body>
+</html>
