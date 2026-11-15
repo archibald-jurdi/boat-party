@@ -112,13 +112,9 @@
     font-size: 1.05rem;
     color: #e0e0ff;
   }
-  .placeholder {
-    background: rgba(255,215,0,0.1);
-    border-left: 3px solid var(--neon-gold);
-    padding: 10px 15px;
-    margin: 10px 0;
-    font-style: italic;
+  .highlight {
     color: var(--neon-gold);
+    font-weight: bold;
   }
   a {
     color: var(--neon-cyan);
@@ -126,10 +122,10 @@
     border-bottom: 1px dashed var(--neon-cyan);
   }
   a:hover { text-shadow: 0 0 10px var(--neon-cyan); }
-  .map-placeholder {
+  .map-box {
     background: rgba(0,240,255,0.05);
     border: 1px dashed var(--neon-cyan);
-    padding: 40px;
+    padding: 20px;
     text-align: center;
     border-radius: 10px;
     margin: 15px 0;
@@ -155,47 +151,35 @@
   <header>
     <h1>BOAT PARTY</h1>
     <div class="subtitle">Miami Nights • 80s Vibes</div>
-    <div class="date-badge">[ADD DATE & TIME HERE]</div>
+    <div class="date-badge">Saturday, November 21</div>
   </header>
 
   <div class="container">
 
     <div class="section">
       <h2>When</h2>
-      <div class="placeholder">[Add full date, start time, and any end time / return time]</div>
-      <p>Example: Saturday, [Month Day], [Year] • Boarding from 6:00 PM • Departure 7:00 PM</p>
+      <p><span class="highlight">Meeting:</span> 3:15 PM<br>
+      <span class="highlight">Start:</span> 3:30 PM SHARP<br>
+      <span class="highlight">End:</span> 9:00 PM</p>
+      <p style="margin-top:15px; color:var(--neon-gold);">Be on time! Consider traffic!</p>
     </div>
 
     <div class="section">
       <h2>Where & How to Get There</h2>
-      <div class="placeholder">[Add marina / dock name and address]</div>
-      <div class="map-placeholder">
-        <p>🗺️ <strong>Google Maps Link</strong></p>
-        <p><a href="#" target="_blank">[PASTE YOUR GOOGLE MAPS LINK HERE]</a></p>
-        <p style="margin-top:10px; font-size:0.9rem; opacity:0.8;">(Open in Google Maps or embed if you want)</p>
+      <p><strong>Meeting Point:</strong> Gate 7, Dubai Harbour – Opposite MMI</p>
+      <div class="map-box">
+        <p>🗺️ <a href="https://maps.app.goo.gl/vL1ySCjWd1LGcgR16" target="_blank">Open Meeting Point in Google Maps</a></p>
       </div>
-      <p>Parking: [Add parking info]<br>
-      Meeting point: [Add exact meeting instructions]</p>
-    </div>
-
-    <div class="section">
-      <h2>Timing & Schedule</h2>
-      <div class="placeholder">[Add the night’s timeline]</div>
-      <ul style="list-style:none; padding-left:0;">
-        <li>6:00 PM – Arrive & board</li>
-        <li>7:00 PM – Set sail</li>
-        <li>Sunset cruise + music</li>
-        <li>[Add more stops or activities]</li>
-        <li>Return around [time]</li>
-      </ul>
+      <p><strong>Parking:</strong> Dubai Harbour Paid Guest Parking</p>
+      <div class="map-box">
+        <p>🅿️ <a href="https://maps.app.goo.gl/fiKwxK8kyEm3j1p28" target="_blank">Open Parking in Google Maps</a></p>
+      </div>
     </div>
 
     <div class="section">
       <h2>Details</h2>
-      <div class="placeholder">[Add what to bring, food/drinks, music, special notes]</div>
-      <p>What to bring: [swimwear, sunscreen, good vibes...]<br>
-      Food & drinks: [provided / BYOB / etc.]<br>
-      Music: 80s Miami classics all night long</p>
+      <p>Bring your drinks and snacks!</p>
+      <p style="margin-top:12px;"><span class="highlight">Rental fee contribution:</span> 120 AED / person</p>
     </div>
 
     <div class="section">
