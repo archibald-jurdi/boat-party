@@ -45,42 +45,60 @@
   .palm.right { right: -30px; transform: scaleX(-1); }
   header {
     text-align: center;
-    padding: 60px 20px 40px;
+    padding: 50px 20px 30px;
     position: relative;
     z-index: 1;
   }
   h1 {
     font-family: 'Monoton', cursive;
-    font-size: clamp(3rem, 10vw, 7rem);
-    background: linear-gradient(90deg, var(--neon-pink), var(--neon-cyan), var(--neon-purple));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-shadow: 0 0 40px var(--neon-pink), 0 0 80px var(--neon-cyan);
-    letter-spacing: 4px;
-    animation: glow 2s ease-in-out infinite alternate;
+    font-size: clamp(3.2rem, 11vw, 7.5rem);
+    color: #fff;
+    letter-spacing: 6px;
+    text-shadow:
+      0 0 10px #fff,
+      0 0 20px var(--neon-pink),
+      0 0 40px var(--neon-pink),
+      0 0 80px var(--neon-pink),
+      0 0 120px var(--neon-purple);
+    animation: neonPulse 2.5s ease-in-out infinite alternate;
+    line-height: 0.9;
   }
-  @keyframes glow {
-    from { filter: drop-shadow(0 0 10px var(--neon-pink)); }
-    to { filter: drop-shadow(0 0 30px var(--neon-cyan)); }
+  @keyframes neonPulse {
+    from { text-shadow: 0 0 10px #fff, 0 0 20px var(--neon-pink), 0 0 40px var(--neon-pink), 0 0 80px var(--neon-pink); }
+    to   { text-shadow: 0 0 15px #fff, 0 0 30px var(--neon-cyan), 0 0 60px var(--neon-pink), 0 0 100px var(--neon-purple); }
   }
   .subtitle {
     font-family: 'Pacifico', cursive;
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     color: var(--neon-cyan);
-    margin-top: 10px;
-    text-shadow: 0 0 15px var(--neon-cyan);
+    margin-top: 12px;
+    text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan);
   }
   .date-badge {
     display: inline-block;
-    margin-top: 25px;
-    padding: 12px 30px;
+    margin-top: 22px;
+    padding: 12px 32px;
     border: 2px solid var(--neon-pink);
     border-radius: 50px;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     letter-spacing: 2px;
-    box-shadow: 0 0 20px var(--neon-pink), inset 0 0 20px rgba(255,43,214,0.2);
-    background: rgba(255,43,214,0.05);
+    box-shadow: 0 0 15px var(--neon-pink), inset 0 0 15px rgba(255,43,214,0.25);
+    background: rgba(255,43,214,0.08);
+    color: #fff;
+  }
+  .flamingo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 90px;
+    height: 140px;
+    opacity: 0.9;
+    filter: drop-shadow(0 0 8px var(--neon-pink)) drop-shadow(0 0 15px var(--neon-cyan));
+    animation: float 4s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
   }
   .container {
     max-width: 900px;
@@ -90,13 +108,13 @@
     z-index: 1;
   }
   .section {
-    background: rgba(10, 0, 20, 0.7);
-    border: 1px solid rgba(255,43,214,0.3);
+    background: rgba(10, 0, 20, 0.75);
+    border: 1px solid rgba(255,43,214,0.4);
     border-radius: 16px;
     padding: 30px;
     margin: 30px 0;
     backdrop-filter: blur(10px);
-    box-shadow: 0 0 30px rgba(176,38,255,0.2);
+    box-shadow: 0 0 30px rgba(176,38,255,0.25);
   }
   h2 {
     font-family: 'Orbitron', sans-serif;
@@ -140,7 +158,8 @@
   }
   @media (max-width: 600px) {
     .section { padding: 20px; }
-    h1 { letter-spacing: 1px; }
+    h1 { letter-spacing: 2px; }
+    .flamingo { width: 60px; height: 90px; top: 10px; right: 10px; }
   }
 </style>
 </head>
@@ -149,6 +168,13 @@
   <div class="palm right"></div>
 
   <header>
+    <svg class="flamingo" viewBox="0 0 100 160" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 140 C40 120, 30 100, 35 80 C40 60, 55 50, 70 40 C80 35, 85 25, 80 15 C75 5, 65 10, 60 20 C55 30, 50 45, 45 60 C40 75, 35 90, 40 110 C45 130, 50 145, 50 140 Z" 
+            fill="none" stroke="#ff2bd6" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M70 40 C85 35, 95 50, 90 65 C85 80, 75 75, 70 60" fill="none" stroke="#00f0ff" stroke-width="2.5"/>
+      <circle cx="78" cy="22" r="3" fill="#ff2bd6"/>
+      <path d="M45 100 L30 95 L25 105" fill="none" stroke="#ff2bd6" stroke-width="2"/>
+    </svg>
     <h1>BOAT PARTY</h1>
     <div class="subtitle">Miami Nights • 80s Vibes</div>
     <div class="date-badge">Saturday, November 21</div>
